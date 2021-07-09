@@ -16,7 +16,7 @@ $ flutter run
 
 ## Screenshots
 
-* The screenshots were taken from a IOS emulator. The device was an Iphone 11 Pro.
+* The screenshots were taken from an Android device.
 
 1. Splash
 
