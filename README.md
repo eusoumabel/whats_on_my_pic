@@ -1,6 +1,6 @@
 # What's on my pic?
 
-It's an app that uses Firebase ML Kit to identify elements on a pic chosen or taken and shows to the user to see.
+It's an app that uses Firebase ML Kit to identify elements on a pic chosen, taken or live and shows to the user to see.
 
 
 ## Getting Started
@@ -28,13 +28,17 @@ $ flutter run
 
 3. Alert
 
-![image (2)](https://user-images.githubusercontent.com/51540772/125129106-509c2b80-e0d5-11eb-9d61-7f423bcd1649.png)
+![Webp net-resizeimage-3](https://user-images.githubusercontent.com/51540772/125343110-124c7980-e32c-11eb-9ae6-c6cafa1b5bc9.png)
 
-4. Ex.1
+4. Live
+
+![Webp net-resizeimage-2](https://user-images.githubusercontent.com/51540772/125342992-edf09d00-e32b-11eb-9f9b-b55f0d3a7123.png)
+
+5. Camera
 
 ![image (3)](https://user-images.githubusercontent.com/51540772/125129113-51cd5880-e0d5-11eb-9fb4-2c638262e8fe.png)
 
-5. Ex.2
+6. Gallery
 
 ![image (4)](https://user-images.githubusercontent.com/51540772/125129116-53971c00-e0d5-11eb-9c83-2fd9585712eb.png)
 
