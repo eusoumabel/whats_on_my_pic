@@ -7,7 +7,7 @@
          FlutterApplication and put your custom class here. -->
     <application
         android:name="io.flutter.app.FlutterApplication"
-        android:label="ml_kit_image_labeling"
+        android:label="What's on My Pic?"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

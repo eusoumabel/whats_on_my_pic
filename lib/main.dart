@@ -1,9 +1,13 @@
+import 'package:camera/camera.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'home/splash_page.dart';
 
-void main() {
+late List<CameraDescription> cameras;
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  cameras = await availableCameras();
   runApp(MyApp());
 }
 
@@ -16,7 +20,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Colors.red,
       ),
-      home: SplashPage(),
+      home: SplashPage(
+        cameras: cameras,
+      ),
     );
   }
 }

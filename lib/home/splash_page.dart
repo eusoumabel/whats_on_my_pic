@@ -1,3 +1,4 @@
+import 'package:camera/camera.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:image_labeling/utils/constants.dart';
@@ -5,6 +6,9 @@ import 'package:image_labeling/utils/constants.dart';
 import 'home_page.dart';
 
 class SplashPage extends StatefulWidget {
+  final List<CameraDescription> cameras;
+
+  const SplashPage({Key? key, required this.cameras}) : super(key: key);
   @override
   _SplashPageState createState() => _SplashPageState();
 }
@@ -25,7 +29,9 @@ class _SplashPageState extends State<SplashPage> {
     await Future.delayed(new Duration(seconds: 4));
     Navigator.of(context).pushReplacement(
       CupertinoPageRoute(
-        builder: (context) => HomePage(),
+        builder: (context) => HomePage(
+          cameras: widget.cameras,
+        ),
       ),
     );
   }

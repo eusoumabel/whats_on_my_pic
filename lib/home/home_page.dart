@@ -1,15 +1,18 @@
 import 'dart:io';
 
+import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:google_ml_kit/google_ml_kit.dart';
 import 'package:image_labeling/components/empty_image_state.dart';
 import 'package:image_labeling/components/photo_item.dart';
 import 'package:image_labeling/components/result_item.dart';
+import 'package:image_labeling/home/live_page.dart';
 import 'package:image_labeling/utils/constants.dart';
 import 'package:image_picker/image_picker.dart';
 
 class HomePage extends StatefulWidget {
-  HomePage({Key? key}) : super(key: key);
+  final List<CameraDescription> cameras;
+  HomePage({Key? key, required this.cameras}) : super(key: key);
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
@@ -81,13 +84,30 @@ class _MyHomePageState extends State<HomePage> {
           style: TextStyle(color: Constants.textColor),
         ),
         actions: [
+          // TextButton(
+          //   onPressed: () {
+          //     Navigator.pop(context);
+          //   },
+          //   child: Text(
+          //     "Fechar",
+          //     style: TextStyle(color: Colors.red[300]),
+          //   ),
+          // ),
           TextButton(
             onPressed: () {
               Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => LivePage(
+                    camera: widget.cameras[0],
+                  ),
+                ),
+              );
             },
             child: Text(
-              "Fechar",
-              style: TextStyle(color: Colors.red[300]),
+              "Live",
+              style: TextStyle(color: Colors.blue[300]),
             ),
           ),
           TextButton(
